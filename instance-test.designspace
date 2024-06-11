@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="4.0">
+  <axes>
+    <axis tag="HGHT" name="Height" minimum="0" maximum="1000" default="0"/>
+    <axis tag="STCK" name="Stack" minimum="0" maximum="1" default="1"/>
+  </axes>
+  <rules>
+    <rule name="bracket0">
+      <conditionset>
+        <condition name="Stack" minimum="1" maximum="1"/>
+        <condition name="Height" minimum="0" maximum="450"/>
+      </conditionset>
+      <sub name="A" with="A.stack"/>
+      <sub name="a" with="a.stack"/>
+    </rule>
+    <rule name="bracket1">
+      <conditionset>
+        <condition name="Stack" minimum="1" maximum="1"/>
+        <condition name="Height" minimum="450" maximum="750"/>
+      </conditionset>
+      <sub name="A" with="A.stack"/>
+      <sub name="a" with="a.break"/>
+    </rule>
+    <rule name="bracket2">
+      <conditionset>
+        <condition name="Stack" minimum="1" maximum="1"/>
+        <condition name="Height" minimum="750" maximum="1000"/>
+      </conditionset>
+      <sub name="A" with="A.break"/>
+      <sub name="a" with="a.break"/>
+    </rule>
+  </rules>
+  <sources>
+    <source filename="masters/Unnamed-High.ufo" name="High" familyname="Unnamed" stylename="High">
+      <location>
+        <dimension name="Height" xvalue="1000"/>
+        <dimension name="Stack" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="masters/Unnamed-Low.ufo" name="Low" familyname="Unnamed" stylename="Low">
+      <location>
+        <dimension name="Height" xvalue="0"/>
+        <dimension name="Stack" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="masters/Unnamed-StackedHigh.ufo" name="Stacked High" familyname="Unnamed" stylename="Stacked High">
+      <location>
+        <dimension name="Height" xvalue="1000"/>
+        <dimension name="Stack" xvalue="1"/>
+      </location>
+    </source>
+    <source filename="masters/Unnamed-StackedLow.ufo" name="Stacked Low" familyname="Unnamed" stylename="Stacked Low">
+      <location>
+        <dimension name="Height" xvalue="0"/>
+        <dimension name="Stack" xvalue="1"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance name="Test High" familyname="Test" stylename="High" filename="instance_ufos/instance-test-high.ufo">
+      <location>
+        <dimension name="Height" xvalue="750"/>
+        <dimension name="Stack" xvalue="0"/>
+      </location>
+    </instance>
+    <instance name="Test Stacked High" familyname="Test" stylename="Stacked High" filename="instance_ufos/instance-test-stacked-high.ufo">
+      <location>
+        <dimension name="Height" xvalue="750"/>
+        <dimension name="Stack" xvalue="1"/>
+      </location>
+    </instance>
+  </instances>
+</designspace>
